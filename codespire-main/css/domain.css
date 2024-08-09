@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dcontainer{
+    position: relative;
+    min-height: 100vh;
+}
+
+.dcontainer .dptitle{
+    font-size: 40px;
+    font-weight: normal;
+    padding: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.dcontainer .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 85px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.dcontainer .image-container .image{
+    height: 250px;
+    width: 350px;
+    border-radius: 50px;
+    outline-style: auto;
+    overflow: hidden;
+    box-shadow: 0 15px 10px -5px rgba(0,0,0,.2);
+    cursor: pointer;
+    text-align: center;
+}
+
+.dcontainer .image-container .image img{
+    height: 75%;
+    width: 75%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.dcontainer .image-container .image:hover img{
+    transform: scale(.95);
+}
+
+.dcontainer .popup-text{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background : #80c9ac;
+    height: 75%;
+    width: 75%;
+    border-radius: 25px;
+    z-index: 100;
+    display: none;
+    
+}
+
+.dcontainer .popup-text span{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    color: #004f7c;
+    cursor: pointer;
+    z-index: 100;
+}
+.centered{
+    color: #004f7c;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.dcontainer .popup-text .text{
+    position: fixed;
+    top: 193px;
+    left: 14px;
+    right: 17px;
+    text-align: center;
+    /* transform: translate(-50%, -50%); */
+    color: #004f7c;
+    font-size: 30px;
+    padding: 0 100px;
+}
+
+.domain-title{
+    font-size: 40px;
+    color: #004f7c;
+    font-weight: bolder;
+    padding-top: 2.5rem;
+    text-align: center;
+}
+
+.domain-title::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 5px;
+    background: #ffefbb;
+    bottom: 370px;
+    left: calc(50% - 90px);
+  }
+
+@media screen and (max-width: 768px){
+    .dcontainer .popup-text {
+        height: 75%;
+        width: 75%;
+    }
+
+    .dcontainer .popup-text .text{
+        left: 47px;
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .dcontainer .popup-text {
+        top: 17.5rem;
+        height: 44%;
+        width: 80%;
+    }
+
+    .dcontainer .popup-text .text {
+        font-size: 13px;
+    top: 87px;
+    left: 10px;
+    padding: 0px 10px;
+    text-align: justify;
+    }
+
+    .dcontainer .popup-text span{
+        font-size: 50px;
+    }
+    
+    .domain-title{
+        padding-top: 1.5rem;
+        font-size: 14px;
+    }
+
+    .dcontainer .image-container .image{
+        height: 200px;
+        width: 260px;
+    }
+
+    .centered{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 444px){
+    .dcontainer .popup-text span{
+        font-size: 30px;
+    }
+}
